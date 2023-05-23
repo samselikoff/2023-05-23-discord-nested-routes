@@ -5,6 +5,8 @@ import { Channel } from "@/app/_lib/data";
 import Link from "next/link";
 import { useSelectedLayoutSegments } from "next/navigation";
 
+type IconName = keyof typeof Icons;
+
 export function ChannelLink({
   channel,
   activeServerId,
@@ -14,7 +16,11 @@ export function ChannelLink({
 }) {
   let [, activeChannelId] = useSelectedLayoutSegments();
 
-  let Icon = channel.icon ? Icons[channel.icon] : Icons.Hashtag;
+  let iconName: IconName = "Hashtag";
+  if (channel.icon) {
+    iconName = channel.icon as IconName;
+  }
+  let Icon = Icons[iconName];
   let active = +channel.id === +activeChannelId;
   const state = active
     ? "active"

@@ -293,6 +293,8 @@ export const data = [
 export type Channel =
   (typeof data)[number]["categories"][number]["channels"][number];
 
+export type Message = Channel["messages"][number];
+
 function getMessages() {
   return [...Array(faker.number.int({ min: 7, max: 25 }))]
     .map(() => {

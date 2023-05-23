@@ -1,5 +1,5 @@
 import * as Icons from "@/app/_components/icons";
-import { data } from "@/app/_lib/data";
+import { Message, data } from "@/app/_lib/data";
 import Image from "next/image";
 
 export default function Page({
@@ -96,7 +96,7 @@ export default function Page({
   );
 }
 
-function MessageWithUser({ message }) {
+function MessageWithUser({ message }: { message: Message }) {
   return (
     <div className="mt-[17px] flex py-0.5 pl-4 pr-16 leading-[22px] hover:bg-gray-950/[.07]">
       <div className="mr-4 mt-0.5 h-10 w-10 flex-shrink-0">
@@ -123,7 +123,7 @@ function MessageWithUser({ message }) {
   );
 }
 
-function Message({ message }) {
+function Message({ message }: { message: Message }) {
   return (
     <div className="py-0.5 pl-4 pr-16 leading-[22px] hover:bg-gray-950/[.07]">
       <p className="pl-14 text-gray-100">{message.text}</p>
