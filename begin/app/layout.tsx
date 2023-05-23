@@ -2,9 +2,6 @@ import Link from "next/link";
 import { Discord } from "./_components/icons";
 import { data } from "./_lib/data";
 import "./globals.css";
-import { Inter } from "next/font/google";
-
-// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -20,12 +17,12 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="flex h-screen text-gray-100">
-          <div className="hidden p-3 space-y-2 overflow-y-scroll bg-gray-900 md:block">
+          <div className="hidden space-y-2 overflow-y-scroll bg-gray-900 p-3 md:block">
             <NavLink href="/">
               <Discord className="h-5 w-7" />
             </NavLink>
 
-            <hr className="border-t-white/[.06] border-t-2 rounded mx-2" />
+            <hr className="mx-2 rounded border-t-2 border-t-white/[.06]" />
 
             {data.map((server) => (
               <NavLink
@@ -48,14 +45,14 @@ export default function RootLayout({
 
 function NavLink({ href, active = false, children }) {
   return (
-    <Link href={href} className="relative block group">
-      <div className="absolute flex items-center h-full -left-3">
+    <Link href={href} className="group relative block">
+      <div className="absolute -left-3 flex h-full items-center">
         <div
           className={`${
             active
               ? "h-10"
-              : "h-5 scale-0 opacity-0 group-hover:opacity-100 group-hover:scale-100"
-          } w-1 transition-all duration-200 origin-left bg-white rounded-r`}
+              : "h-5 scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100"
+          } w-1 origin-left rounded-r bg-white transition-all duration-200`}
         ></div>
       </div>
 
@@ -64,8 +61,8 @@ function NavLink({ href, active = false, children }) {
           className={`${
             active
               ? "rounded-2xl bg-brand text-white"
-              : "text-gray-100 group-hover:rounded-2xl group-hover:bg-brand group-hover:text-white bg-gray-700 rounded-3xl"
-          } flex items-center justify-center w-12 h-12 transition-all duration-200 overflow-hidden`}
+              : "rounded-3xl bg-gray-700 text-gray-100 group-hover:rounded-2xl group-hover:bg-brand group-hover:text-white"
+          } flex h-12 w-12 items-center justify-center overflow-hidden transition-all duration-200`}
         >
           {children}
         </div>
