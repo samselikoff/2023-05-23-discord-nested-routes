@@ -31,7 +31,12 @@ export default function RootLayout({
                 serverId={server.id}
                 key={server.id}
               >
-                <Image fill src={`/servers/${server.img}`} alt="" />
+                <Image
+                  width={48}
+                  height={48}
+                  src={`/servers/${server.img}`}
+                  alt=""
+                />
               </NavLink>
             ))}
           </div>
