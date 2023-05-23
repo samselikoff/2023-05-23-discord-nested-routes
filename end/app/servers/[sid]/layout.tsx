@@ -12,18 +12,19 @@ export default function Layout({
   children: ReactNode;
   params: { sid: string };
 }) {
-  let [closedCategories, setClosedCategories] = useState<number[]>([]);
   const server = data.find((server) => +server.id === +params.sid);
-  if (!server) {
-    return null;
-  }
 
+  let [closedCategories, setClosedCategories] = useState<number[]>([]);
   function toggleCategory(categoryId: number) {
     setClosedCategories((closedCategories) =>
       closedCategories.includes(categoryId)
         ? closedCategories.filter((id) => id !== categoryId)
         : [...closedCategories, categoryId]
     );
+  }
+
+  if (!server) {
+    return null;
   }
 
   return (
