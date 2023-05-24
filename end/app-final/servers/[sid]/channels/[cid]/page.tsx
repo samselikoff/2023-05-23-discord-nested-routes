@@ -110,7 +110,7 @@ function MessageWithUser({ message }: { message: Message }) {
       </div>
       <div>
         <p className="flex items-baseline">
-          <span className="mr-2 text-[15px] font-medium text-white">
+          <span className="mr-2 text-[15px] font-semibold text-white">
             {message.user}
           </span>
           <span className="text-xs font-medium text-gray-400">

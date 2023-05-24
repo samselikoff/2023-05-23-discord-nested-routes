@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Discord } from "../components/icons";
 import { data } from "../lib/data";
-import "./globals.css";
+import "../globals.css";
 import { NavLink } from "./nav-link";
 
 export const metadata = {
