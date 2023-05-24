@@ -1,5 +1,5 @@
-import * as Icons from "@/app/_components/icons";
-import { Message, data } from "@/app/_lib/data";
+import * as Icons from "@/components/icons";
+import { Message, data } from "@/lib/data";
 import Image from "next/image";
 
 export default function Page({

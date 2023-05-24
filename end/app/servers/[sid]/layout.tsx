@@ -1,7 +1,7 @@
 "use client";
 
-import * as Icons from "@/app/_components/icons";
-import { data } from "@/app/_lib/data";
+import * as Icons from "@/components/icons";
+import { data } from "@/lib/data";
 import { ReactNode, useState } from "react";
 import { ChannelLink } from "./channel-link";
 

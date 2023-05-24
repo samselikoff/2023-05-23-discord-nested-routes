@@ -1,7 +1,7 @@
 "use client";
 
-import * as Icons from "@/app/_components/icons";
-import { Channel } from "@/app/_lib/data";
+import * as Icons from "@/components/icons";
+import { Channel } from "@/lib/data";
 import Link from "next/link";
 import { useSelectedLayoutSegments } from "next/navigation";
 
