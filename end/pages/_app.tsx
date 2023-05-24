@@ -7,8 +7,9 @@ import { Discord } from "../components/icons";
 import "../globals.css";
 import { data } from "@/lib/data";
 import Image from "next/image";
+import { AppProps } from "next/app";
 
-export default function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   let router = useRouter();
   let [isFirstRender, setIsFirstRender] = useState(true);
   useEffect(() => {
