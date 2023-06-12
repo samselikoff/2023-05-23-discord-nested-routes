@@ -39,7 +39,7 @@ export default function Server() {
             <Icons.Verified className="absolute h-4 w-4 text-gray-550" />
             <Icons.Check className="absolute h-4 w-4" />
           </div>
-          Tailwind CSS
+          {server.label}
           <Icons.Chevron className="ml-auto h-[18px] w-[18px] opacity-80" />
         </button>
 
